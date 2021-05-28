@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalR.Server", "Server\BlazorSignalR.Server.csproj", "{450574E0-2961-42D3-BE7E-708E589B1AD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalR.Server", "Server\BlazorSignalR.Server.csproj", "{450574E0-2961-42D3-BE7E-708E589B1AD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalR.Client", "Client\BlazorSignalR.Client.csproj", "{6C6BD9AC-33EE-4702-B4F4-CD6FC13EABBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalR.Client", "Client\BlazorSignalR.Client.csproj", "{6C6BD9AC-33EE-4702-B4F4-CD6FC13EABBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalR.Shared", "Shared\BlazorSignalR.Shared.csproj", "{CE18CC0C-B419-4A8D-B3DB-F31481DCC9D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalR.Shared", "Shared\BlazorSignalR.Shared.csproj", "{CE18CC0C-B419-4A8D-B3DB-F31481DCC9D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

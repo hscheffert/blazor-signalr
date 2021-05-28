@@ -1,0 +1,44 @@
+﻿@page "/users"
+
+@inject HttpClient Http
+
+<h3>Users</h3>
+
+@if (users == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.FullName</td>
+                    <td>@user.Email</td>
+                    <td>@user.Phone</td>
+                    <td>@user.Gender</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<UserInfo> users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Call our controller that calls an external API
+        users = await Http.GetFromJsonAsync<UserInfo[]>("api/Users");
+    }
+}

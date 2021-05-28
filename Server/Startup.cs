@@ -1,4 +1,5 @@
 using BlazorSignalR.Server.Hubs;
+using BlazorSignalR.Server.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -28,6 +29,12 @@ namespace BlazorSignalR.Server
             services.AddResponseCompression(options =>
             {
                 options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "application/octet-stream" });
+            });
+
+            services.AddHttpClient<UserService>(client =>
+            {
+                client.BaseAddress = new System.Uri(Configuration["RandomUserApiBaseUrl"]);
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             });
         }
 
